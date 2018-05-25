@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!--  infinite-scroll-distance="100" -->
+        <div id="information"
+            v-infinite-scroll="getList"
+            infinite-scroll-disabled="loading"
+            infinite-scroll-distance="10"
+        >
+            <div class="bodyBox" v-for="key,value in mapData">
+                <div class="date_count cf">
+                    <p class="date">日期{{value}}</p>
+                    <p class="count">共{{key.length}}条</p>
+                </div>
+                <div class="articalBox" v-for="row in key">
+                    <div class="artical" eventId="">
+                        <div>
+                            <p class="bodyTilte">{{row.minTitle}}</p>
+                            <p class="keyValue cf">
+                                <span class="bodyKey" style="float: left; height: 18.5833px; line-height: 18.5833px;">
+                                    {{row.bodyKey}}：
+                                </span>
+                                <span class="bodyValue" style="float: left; height: 18.5833px; line-height: 18.5833px;">
+                                    {{row.bodyValue}}
+                                </span>
+                            </p>
+                        </div>
+                        <div class="goInfo">
+                            <img src="mobile/img/go_on.png" style="width:0.6rem;height:0.6rem;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

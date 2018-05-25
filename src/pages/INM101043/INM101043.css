@@ -1,0 +1,70 @@
+.inno-content {
+	text-align: center;
+}
+.chart_switche_box{
+	border-radius:0.0533rem;
+	border:0.0267rem solid #c3c3c3;
+	border-left:transparent;
+	box-sizing:border-box;
+	margin:0 auto;
+	width:3.7333rem;
+	height:0.7467rem;
+	line-height:0.7467rem;
+	display:flex;
+	justify-content:between-space;
+}
+.chart_switche_box.idx0{
+	border-left:transparent;
+	border-right:#c3c3c3 0.0267rem solid;
+}
+.chart_switche_box.idx1{
+	border-right:transparent;
+	border-left:#c3c3c3 0.0267rem solid;
+}
+.chart_switche{
+	flex:1;
+	font-size:0.3733rem;
+	height:0.7467rem;
+	margin-top:-0.0267rem;
+	text-align:center;
+	outline:none;
+}
+.chart_switche:active{
+	outline: none;
+}
+.selected_chart{
+	background-color:#0089e1;
+	color:#fff;
+	border-radius:0.0533rem;
+}
+#table{
+	font-size:0.3733rem;
+	color:#666;
+	width:100%;
+}
+#table .title{
+	background-color:#e5e5e5 !important;
+	color:#333 !important;
+	height:1.28rem;
+	line-height:1.28rem;
+	white-space:nowrap;
+	width:23%;
+	font-weight:normal;
+}
+#table .title:nth-child(1){
+	width:30%;
+}
+#table tbody tr td{
+	height:1.28rem;
+	line-height:1.28rem;
+}
+#table tbody tr:nth-child(even) td{
+	background-color:#f9f9f9;
+}
+.noDataBox{
+	margin-top:calc(50% - 1.6rem);
+}
+.noDataImg{
+	height: 5.3333rem;
+	width: 5.3333rem;
+}

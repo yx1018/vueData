@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="no-js " lang="zh-CN">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- dns预解析   加快图片加载时间 -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <!-- 是否为手持设备优化 -->
+  <meta name="HandheldFriendly" content="True">
+  <!-- 为某个宽度特殊优化 -->
+  <meta name="MobileOptimized" content="320">
+  <!-- 针对LCD液晶显示器设计，可提高文字的清晰度 -->
+  <meta http-equiv="cleartype" content="on">
+  <!-- <link rel="shortcut icon" href="https://b.yzcdn.cn/v2/image/yz_fc.ico"> -->
+  <title>生长测定</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+  [v-cloak] {
+    display: none;
+  }
+  </style>
+ 
+</head>
+
+<body class=" ">
+  <div id="app" v-cloak>
+    <div class="inno-content">
+      <div id="chart" style="padding:0.5rem 0;">
+        <ul :class="{chart_switche_box:true,idx0:currentIndex===0,idx1:currentIndex===1}">
+          <li index='0' :class="{chart_switche:true,selected_chart:currentIndex===0,chart_open:true}" @click="changeTab(0)">曲线图</li>
+          <li index='1' :class="{chart_switche:true,selected_chart:currentIndex===1,table_open:true}" @click="changeTab(1)">数据列表</li>
+        </ul>
+      </div>
+      <div class="char_containerBox" v-show="currentIndex===0">
+        <div id="char_container" style="margin:0 auto;width:100%;" v-show="currentData&&currentData.length>0"></div>
+        <div v-show="currentData&&currentData.length===0" class="noDataBox">
+          <img class="noDataImg" src="static/imgs/no_record.png" alt="">
+        </div>
+      </div>
+      <div v-show="currentIndex===1">
+          <table id="table" class="table table-striped" v-show="currentData&&currentData.length>0">
+              <thead>
+                <tr><th :class="{title:true}">测定日期</th><th :class="{title:true}">月龄</th><th :class="{title:true}">体重</th><th :class="{title:true}">体高</th></tr>
+              </thead>
+              <tbody>
+                  <tr v-for="item in currentData" >
+                    <td>{{item.eventTime}}</td>
+                    <td>{{item.cattleAge}}</td>
+                    <td>{{item.weight==''?'-':item.weight}}</td>
+                    <td>{{item.witherHeight==''?'-':item.witherHeight}}</td>
+                  </tr>
+              </tbody>
+            </table>
+            <div v-show="currentData&&currentData.length===0" class="noDataBox">
+                <img class="noDataImg" src="static/imgs/no_record.png" alt="">
+            </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

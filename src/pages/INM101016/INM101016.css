@@ -1,0 +1,112 @@
+html,body {
+	height: 100%;
+	font-family: "微软雅黑";
+	padding: 0;
+	padding: 0;
+	background-color:#f8f8f8;
+}
+.date_count{
+	height:1.95rem;
+	position:relative;
+	background-color:#f8f8f8;
+	padding:0 0.8rem;
+	font-size:0.7rem;
+	color:#999;
+	border-bottom:1px solid #e5e5e5;
+	box-sizing:border-box;
+}
+.date{
+	position:absolute;
+	left:0.8rem;
+}
+.count{
+	position:absolute;
+	right:0.8rem;
+}
+.articalBox,.artical2Box{
+	position:relative;
+}
+.artical,.artical2{
+	margin:0 0.8rem;
+	border-bottom:1px solid #e5e5e5;
+}
+.bodyBox4{
+	position:relative;
+	padding:0 0.8rem;
+	border-bottom:1px solid #e5e5e5;
+}
+.articalBox:last-child .artical,.artical2Box:last-child .artical2{
+	margin:0;
+	padding:0 0.8rem;
+}
+.artical .bodyTilte,.artical3 .bodyTilte3{
+	padding:0.5rem 0 0.25rem 0;
+	font-size:0.9rem;
+	color:#0089e1;
+}
+.secondTitle{
+	padding:0.6rem 0 0.25rem 0;
+}
+.artical .keyValue{
+	padding:0 0 0.5rem 0;
+	font-size:0.7rem;
+	color:#333;
+}
+.bodyTilte2{
+	font-size:0.9rem;
+	color:#0089e1;
+	height:2.4rem;
+	line-height:2.4rem;
+}
+.artical3 p{
+	float:left;
+}
+.bodyBox3{
+	padding:0 0.8rem;
+	border-bottom:1px solid #e5e5e5;
+}
+.bodyBox3 .bodyValueList{
+	margin-bottom:0.5rem;
+}
+.bodyBox3 .bodyValueList p{
+	width:50%;
+	margin-bottom:0.25rem;
+}
+.bodyBox3 .bodyValueList p:nth-child(2){
+	padding:0 0 0 0.8rem;
+	box-sizing:border-box;
+}
+.bodyBox3 .bodyValueList p span,.bodyBox4 .bodyValueList p span{
+	font-size:0.7rem;
+	color:#333;
+}
+.bodyBox4 .secondTitle{
+	font-size:0.7rem;
+	color:#999;
+}
+.bodyBox4 .secondTitle,.bodyBox4 .bodyValueList p:nth-child(2){
+	margin:0 0 0 1.6rem;
+}
+.bodyBox4 .bodyValueList{
+	padding:0 0 0.5rem 0;
+}
+.bodyBox4 .bodyValueList p:first-child,.bodyBox4 .bodyTilte3{
+	width:6rem;
+}
+.bodyBox3 .bodyDateTime{
+	font-size:0.6rem;
+	color:#c3c3c3;
+	float:right;
+	padding:0.6rem 0 0;
+}
+.goInfo{
+	position:absolute;
+	right:0rem;
+	top:calc(50% - 0.3rem);
+}
+.goInfo{
+	right:0.8rem;
+}
+.articalBox:active,.artical2Box:active,.bodyBox4:active{
+	background-color:#f8f8f8;
+}

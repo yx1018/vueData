@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>问题反馈</title>
+    <style>
+        [v-cloak]{display:none;}
+    </style>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <form action="" @submit="onSubmit" method="post">
+            <div class="row">
+                <textarea maxlength="1000"  placeholder="请输入反馈信息" v-model="content" class="content"></textarea>
+            </div>
+            <div class="row">
+                <input type="text" maxlength="200"  placeholder="请填写你的手机号" v-model="contact"  class="contact">
+            </div>
+            <div class="row">
+                <mt-button type="primary" size="normal" :style="{padding:'0 0.8rem'}">提交</mt-button>
+            </div>
+            <div class="aboutBox">
+                <div>
+                    <span class="about">或者通过以下方式联系我们：</span>
+                </div>
+                <div>
+                    <span class="about">微信公众号：IFARMS</span>
+                </div>
+                <div>
+                    <span class="about">客服电话：010-65956788</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
